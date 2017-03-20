@@ -1,0 +1,16 @@
+<html>
+<head></head>
+<body>
+	<h1>Welcome to Registration Form</h1>
+
+	<form action="{% url 'LoginApp:register_success' %}" method="POST">
+		{% csrf_token %}
+		<lable>Username:</lable> <input type='text' name='uname'></input><br><br>
+		<lable>Password:</lable> <input type='Password' name='pwd'/><br><br>
+		<lable>Email:</lable> <input type='email' name='email'/><br><br>
+		<lable>Gender:</lable> <input type='radio' name='gender'>Male</input> <input type='radio' name='gender'>Female</input><br><br>
+
+		<input type='submit' value="Register"/>
+	</form>
+
+</body>

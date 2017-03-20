@@ -1,0 +1,12 @@
+<html>
+<head></head>
+<body>
+	<h1>Welcome to Registration Form</h1>
+
+	<form action="{% url 'LoginApp:register_success_form' %}" method="POST">
+		{% csrf_token %}
+			{{form.as_p}}
+		<input type='submit' value="Register"/>
+	</form>
+
+</body>
